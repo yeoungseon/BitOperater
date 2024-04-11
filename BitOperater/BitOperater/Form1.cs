@@ -137,13 +137,19 @@ namespace BitOperater
         private void btnShiftUp_Click(object sender, EventArgs e)
         {
             int gB = Convert.ToInt32(txtNumber.Text);
-            int idx = Convert.ToInt32(txtIndex.Text);
-
-            gB = (0x01 << idx)<<1;
+            gB = gB << 1;
             txtNumber.Text = Convert.ToString(gB);
-
             SetCheckBox(gB);
         }
+
+        private void btnShiftDown_Click(object sender, EventArgs e)
+        {
+            int gB = Convert.ToInt32(txtNumber.Text);
+            gB = gB >> 1;
+            txtNumber.Text = Convert.ToString(gB);
+            SetCheckBox(gB);
+        }
+
 
         private void btnToggle_Click(object sender, EventArgs e)
         {
