@@ -156,9 +156,9 @@ namespace BitOperater
             int gB = Convert.ToInt32(txtNumber.Text);
             int idx = Convert.ToInt32(txtIndex.Text);
 
-            gB = gB ^ ~(0x01 << idx);
+            gB = gB ^ (0x01 << idx);
             txtNumber.Text = Convert.ToString(gB);
-
+        
             SetCheckBox(gB);
         }
     }
